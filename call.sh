@@ -1,13 +1,12 @@
 #!/bin/bash
-rm /tmp/baresip_fifo          # Entfernen des alten fifo Tunnels
-mkfifo /tmp/baresip_fifo      # Erstellen eines neuen fifo Tunnels
+rm /tmp/baresip_fifo          
+mkfifo /tmp/baresip_fifo      
 
-# baresip starten
+
 baresip < /tmp/baresip_fifo &
 BARESIP_PID=$!
 echo "/about" > /tmp/baresip_fifo
 
-# Warten auf kompletten Start von baresip
 sleep 3
 
 for num in "$@"
