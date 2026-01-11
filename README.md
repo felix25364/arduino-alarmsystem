@@ -94,3 +94,27 @@ Running the System
     Multi-Channel Alert: Instant notification via Email and Phone Call.
 
     Auto-Timeout: System automatically re-arms after 30 minutes of inactivity.
+
+⚙️ High Customizability
+
+This project is designed to be modular, allowing you to easily swap or modify components to fit your specific security needs.
+
+🔄 Flexible Alert Actions (call.sh)
+
+The system uses a standalone Bash script to handle phone alerts. This makes the alert logic highly customizable without needing to touch the core Python code.
+
+    Default SIP Calling: By default, the system uses baresip to dial predefined numbers.
+
+    Easy Replacement: You can replace the contents of call.sh with any command-line tool. For example, you could swap it to send a Telegram message, trigger a smart home routine, or play a local alarm sound.
+
+    Argument Passing: The Python script automatically passes the first three phone numbers defined in alarm.py as arguments to the script.
+
+🛠 Modular Configuration
+
+    Configurable PIN & Timers: Easily change the master PIN, the open-door delay, or the 30-minute auto-lock duration directly in the Arduino source.
+
+    Adjustable Capture Sequence: Modify esp32-cam.ino to change the number of images taken (default is 10) or the interval between shots (default is 1 second).
+
+    Network & Storage: The system supports local storage on an SD card while simultaneously uploading to any standard FTP server.
+
+    WLAN Management: Uses WiFiManager on the ESP32, so you can change WiFi credentials without re-flashing the code.
