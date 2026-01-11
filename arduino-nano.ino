@@ -2,7 +2,7 @@
 
 // Pinlänge und Pincode festlegen
 const byte PINLENGTH = 4;
-char pinCode[PINLENGTH+1] = {'9','1','1','1'};
+char pinCode[PINLENGTH+1] = {'0','0','0','0'};
 char keyBuffer[PINLENGTH+1] = {'-','-','-','-'};
 
 // 4x4 Keypad Definition
