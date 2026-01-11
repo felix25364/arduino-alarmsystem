@@ -22,7 +22,7 @@ The "brain" of the physical lock.
 
     Security Logic: Compares entered pins against a hardcoded code (9111).
 
-Auto-Lock: Features a 30-minute auto-lock timer if the door switch is closed.
+    Auto-Lock: Features a 30-minute auto-lock timer if the door switch is closed.
 
 Trigger: Sends a "START" signal via Serial to the ESP32-CAM when the door is opened or a pin is entered.
 
@@ -32,9 +32,9 @@ The imaging module.
 
     WiFi & Camera: Connects to WiFi via WiFiManager and initializes the AI-Thinker camera module.
 
-Image Capture: Upon receiving "START" from Serial, it captures 10 JPEG images.
+    Image Capture: Upon receiving "START" from Serial, it captures 10 JPEG images.
 
-Storage & Transfer: Saves images to an SD card and simultaneously uploads them to a specified FTP server.
+    Storage & Transfer: Saves images to an SD card and simultaneously uploads them to a specified FTP server.
 
 3. alarm.py
 
@@ -54,7 +54,7 @@ Hardware Connections
 
     Keypad: Connect to Arduino Pins 9, 8, 7, 6 (Rows) and 5, 4, 3, 2 (Cols).
 
-LEDs: Green Pin 11, Red Pin 10.
+    LEDs: Green Pin 11, Red Pin 10.
 
     Serial Link: Connect Arduino TX to ESP32-CAM RX (ensure logic level shifting if necessary, as ESP32 is 3.3V).
 
@@ -66,7 +66,7 @@ Software Configuration
 
         Flash esp32-cam.ino to the ESP32-CAM.
 
-    Python Backend:
+Python Backend:
 
         Install dependencies: pip install pyftpdlib.
 
@@ -89,8 +89,8 @@ Running the System
 
     Visual Evidence: 10-image burst capture for every event.
 
-Redundancy: Images are stored on both the local SD card and a remote FTP server.
+    Redundancy: Images are stored on both the local SD card and a remote FTP server.
 
-Multi-Channel Alert: Instant notification via Email and Phone Call.
+    Multi-Channel Alert: Instant notification via Email and Phone Call.
 
-Auto-Timeout: System automatically re-arms after 30 minutes of inactivity.
+    Auto-Timeout: System automatically re-arms after 30 minutes of inactivity.
