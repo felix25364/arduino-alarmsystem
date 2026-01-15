@@ -1,5 +1,5 @@
 # Arduino Intrusionn Detection System
-This is a alarm/intrusion detection system I made with a ESP32-CAM and some other easy to get components
+This is a alarm/intrusion detection system I made with a ESP32-CAM
 
 ## components:
     ESP32-CAM
